@@ -1,0 +1,22 @@
+services:
+  postgress:
+    image: postgres:latest
+    container_name: postgres_discord_clone
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:latest
+    container_name: redis_discord_clone
+    ports:
+      - 6379:6379
+
+volumes:
+  my_postgres_data:
