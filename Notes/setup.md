@@ -28,6 +28,12 @@ graphql-upload 버전 14를 설치. 최신 버전은 타입스크립트 관련 �
 npm i graphql-upload@14.0.0
 ```
 
+서버 실행시 GraphQLError: Query root type must be provided.가 뜨면, query가 하나도 없어서 뜨는 것이다.
+
 ```
+nest g module server
+
 nest g service server
+
+nest g resolver server
 ```
